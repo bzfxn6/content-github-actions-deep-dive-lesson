@@ -68,10 +68,11 @@ jobs:
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
-        upload_url: ${{ steps.create-release.outputs.upload_url }}
-        asset_path: ./${{ github.sha }}.zip
-        asset_name: source_code_with_lib.zip
-        asset_content_type: application/zip
+        with:
+          upload_url: ${{ steps.create-release.outputs.upload_url }}
+          asset_path: ./${{ github.sha }}.zip
+          asset_name: source_code_with_lib.zip
+          asset_content_type: application/zip
           
 
 
