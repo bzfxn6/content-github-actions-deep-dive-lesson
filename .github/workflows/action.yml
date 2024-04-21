@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        users: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: Set up python
-        users: actions/setup-python@v2
+        uses: actions/setup-python@v2
         with:
           python-versions: 3.8
       - name: Install libraries
